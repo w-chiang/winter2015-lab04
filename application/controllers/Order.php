@@ -98,6 +98,7 @@ class Order extends Application {
         }
         
         $this->data['items'] = $items;
+        $this->data['okornot'] = $this->orders->validate($order_num);
 
         $this->render();
     }
