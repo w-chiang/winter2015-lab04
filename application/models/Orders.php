@@ -73,15 +73,7 @@ class Orders extends MY_Model {
             }
         }
         
-        if(isset($gotem['m']) && isset($gotem['d']) && isset($gotem['s']) == false)
-        {
-            return "disabled";
-        }
-        else
-        {
-            return "";
-        }
-        
+        return (isset($gotem['m']) && isset($gotem['d']) && isset($gotem['s']));
     }
 
 }
