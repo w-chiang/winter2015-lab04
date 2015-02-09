@@ -22,7 +22,7 @@ class Orders extends MY_Model {
         $CI = &get_instance();
         $CI->load->model('orderitems');
         
-        $items = $this->orderitems->some('code', $num);
+        $items = $this->orderitems->some('order', $num);
         
         $result = 0.0;
         foreach ($items as $item)
